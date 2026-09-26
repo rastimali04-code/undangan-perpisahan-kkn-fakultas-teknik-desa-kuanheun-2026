@@ -34,7 +34,7 @@ body{
     position:relative;
     background:
       linear-gradient(rgba(28,22,15,.66),rgba(28,22,15,.72)),
-      url("foto_kelompok_kkn.png.jpeg") center/cover;
+      url("foto_kelompok_kkn.png") center/cover;
 }
 .cover:after{
     content:"";
@@ -227,11 +227,21 @@ footer{
     <div class="label">Dengan Hormat</div>
     <h2>Perpisahan KKN</h2>
     <div class="ornamen"></div>
+
     <p>
-        Dengan penuh rasa syukur atas kebersamaan,
-        kami mengundang Bapak/Ibu/Saudara/i untuk
-        hadir dalam acara perpisahan KKN
-        Fakultas Teknik UCB Tahun 2026.
+        <strong>Kepada Yth.</strong><br>
+        <strong>Teman-teman Pemuda Wilayah 3</strong>
+    </p>
+
+    <p style="margin-top:15px;">
+        di Tempat
+    </p>
+
+    <p style="margin-top:15px;">
+        Dengan hormat, kami mengundang
+        <strong>Teman-teman Pemuda Wilayah 3</strong>
+        untuk hadir dalam acara
+        <strong>Perpisahan KKN Fakultas Teknik UCB Tahun 2026</strong>.
     </p>
 
     <div class="card">
@@ -264,10 +274,8 @@ footer{
        target="_blank">📍 Buka Lokasi di Google Maps</a>
 
     <a class="wa"
-   href="https://wa.me/6281238233549?text=Halo%2C%20saya%20ingin%20mengonfirmasi%20kehadiran%20pada%20acara%20perpisahan%20KKN%20Fakultas%20Teknik%20UCB%202026."
-   target="_blank">
-   💬 RSVP / Konfirmasi Kehadiran via WhatsApp
-</a>
+       href="https://wa.me/qr/INIGNU4ZCBSZE1"
+       target="_blank">💬 RSVP / Konfirmasi Kehadiran via WhatsApp</a>
 </section>
 
 <section class="reveal">
@@ -276,7 +284,7 @@ footer{
     <div class="ornamen"></div>
 
     <div class="photo-wrap">
-        <img src="foto_kelompok_kkn.png.jpeg" alt="Foto Kelompok KKN Fakultas Teknik UCB 2026">
+        <img src="c:\Users\USER\Downloads\foto_kelompok_kkn.png.jpeg" alt="Foto Kelompok KKN Fakultas Teknik UCB 2026">
     </div>
 
     <p class="quote">
@@ -332,12 +340,11 @@ footer{
 </div>
 
 <!-- Ganti file musik dengan musik pilihan Anda dan beri nama musik.mp3 -->
-<audio id="musik" loop preload="metadata">
+<audio id="musik" loop preload="auto">
     <source src="musik.mp3" type="audio/mpeg">
-    Browser Anda tidak mendukung pemutar audio.
 </audio>
 
-<button class="music-btn" id="musicBtn" type="button" onclick="toggleMusic()">🎵 Musik OFF</button>
+<button class="music-btn" id="musicBtn" onclick="toggleMusic()">🎵 Musik OF</button>
 
 <script>
 // ===============================
@@ -383,39 +390,18 @@ updateCountdown();
 const musik = document.getElementById("musik");
 const musicBtn = document.getElementById("musicBtn");
 
-musik.volume = 0.8;
-
 function toggleMusic(){
-    if (musik.paused) {
-        musik.play()
-            .then(() => {
-                musicBtn.textContent = "🎵 Musik ON";
-            })
-            .catch((error) => {
-                console.error("Musik gagal diputar:", error);
-                musicBtn.textContent = "❌ Musik gagal";
-            });
-    } else {
+    if(musik.paused){
+        musik.play().then(()=>{
+            musicBtn.textContent="🎵 Musik ON";
+        }).catch(()=>{
+            alert("musik.mp3.");
+        });
+    }else{
         musik.pause();
-        musicBtn.textContent = "🎵 Musik OFF";
+        musicBtn.textContent="🎵 Musik OF";
     }
 }
-
-// Setelah pengguna menekan "Buka Undangan", coba mulai musik.
-// Browser tetap dapat memblokir autoplay; tombol musik selalu tersedia.
-document.querySelector('.btn[href="#acara"]')?.addEventListener("click", () => {
-    setTimeout(() => {
-        if (musik.paused) {
-            musik.play()
-                .then(() => {
-                    musicBtn.textContent = "🎵 Musik ON";
-                })
-                .catch(() => {
-                    musicBtn.textContent = "🎵 Putar Musik";
-                });
-        }
-    }, 150);
-});
 
 // Animasi saat scroll
 const observer = new IntersectionObserver((entries)=>{
