@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perpisahan KKN Fakultas Teknik UCB 2026</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+    font-family:"Segoe UI",Arial,sans-serif;
+    background:#eee8dc;
+    color:#332b23;
+    line-height:1.7;
+}
+.container{
+    max-width:520px;
+    margin:auto;
+    background:#fffdf9;
+    min-height:100vh;
+    box-shadow:0 0 30px rgba(0,0,0,.12);
+    overflow:hidden;
+}
+.cover{
+    min-height:100vh;
+    padding:35px 25px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    position:relative;
+    background:
+      linear-gradient(rgba(28,22,15,.66),rgba(28,22,15,.72)),
+      url("foto_kelompok_kkn.png") center/cover;
+}
+.cover:after{
+    content:"";
+    position:absolute;
+    inset:15px;
+    border:1px solid rgba(255,255,255,.45);
+    border-radius:22px;
+    pointer-events:none;
+}
+.kecil{
+    font-size:12px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+.cover h1{
+    font-family:Georgia,serif;
+    font-size:35px;
+    line-height:1.25;
+    margin:18px 0 10px;
+    text-shadow:0 2px 12px #000;
+}
+.cover .tahun{
+    font-size:18px;
+    letter-spacing:5px;
+}
+.cover p{
+    max-width:390px;
+    margin-top:18px;
+    font-size:15px;
+}
+.btn{
+    display:inline-block;
+    text-decoration:none;
+    color:#fff;
+    background:#9a7952;
+    padding:12px 25px;
+    border-radius:30px;
+    margin-top:25px;
+    font-weight:600;
+    border:1px solid rgba(255,255,255,.5);
+    position:relative;
+    z-index:2;
+}
+section{
+    padding:55px 25px;
+    text-align:center;
+}
+.label{
+    color:#9a7952;
+    font-size:12px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+h2{
+    font-family:Georgia,serif;
+    font-size:28px;
+    color:#59432d;
+    margin:8px 0 15px;
+}
+.ornamen{
+    width:70px;
+    height:1px;
+    background:#c5a77d;
+    margin:15px auto 25px;
+}
+.card{
+    background:#f7f1e7;
+    border:1px solid #eadcc8;
+    border-radius:22px;
+    padding:25px 18px;
+    margin-top:22px;
+}
+.info{margin:17px 0}
+.icon{font-size:25px}
+.info b{color:#59432d}
+.countdown{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:8px;
+    margin-top:25px;
+}
+.timebox{
+    background:#59432d;
+    color:white;
+    border-radius:15px;
+    padding:12px 5px;
+}
+.timebox strong{
+    display:block;
+    font-size:24px;
+}
+.timebox span{
+    font-size:10px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+.photo-wrap{
+    margin:25px 0;
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:0 12px 30px rgba(0,0,0,.16);
+}
+.photo-wrap img{
+    width:100%;
+    display:block;
+}
+.quote{
+    font-family:Georgia,serif;
+    font-style:italic;
+    color:#6e5841;
+    margin-top:25px;
+}
+.members{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin-top:22px;
+}
+.member{
+    background:#f8f4ec;
+    border:1px solid #eadfce;
+    border-radius:14px;
+    padding:11px 8px;
+    font-size:13px;
+}
+.map,.wa,.music-btn{
+    display:block;
+    width:100%;
+    border:0;
+    text-decoration:none;
+    padding:13px 18px;
+    border-radius:28px;
+    margin-top:13px;
+    font-weight:700;
+    cursor:pointer;
+    font-size:14px;
+}
+.map{background:#59432d;color:white}
+.wa{background:#25D366;color:white}
+.music-btn{
+    position:fixed;
+    right:18px;
+    bottom:18px;
+    width:auto;
+    z-index:20;
+    background:#59432d;
+    color:white;
+    box-shadow:0 5px 20px #0003;
+}
+footer{
+    padding:28px 20px;
+    text-align:center;
+    background:#59432d;
+    color:white;
+    font-size:13px;
+}
+.reveal{
+    opacity:0;
+    transform:translateY(25px);
+    transition:all .8s ease;
+}
+.reveal.show{
+    opacity:1;
+    transform:translateY(0);
+}
+@media(max-width:380px){
+    .cover h1{font-size:30px}
+    .members{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<section class="cover" id="home">
+    <div class="kecil">Undangan Perpisahan</div>
+    <h1>KKN<br>FAKULTAS TEKNIK UCB</h1>
+    <div class="tahun">2026</div>
+    <p>
+        Sebuah akhir dari perjalanan KKN,
+        tetapi menjadi awal dari cerita dan
+        kenangan yang akan selalu diingat.
+    </p>
+    <a class="btn" href="#acara">Buka Undangan</a>
+</section>
+
+<section id="acara" class="reveal">
+    <div class="label">Dengan Hormat</div>
+    <h2>Perpisahan KKN</h2>
+    <div class="ornamen"></div>
+    <p>
+        Dengan penuh rasa syukur atas kebersamaan,
+        kami mengundang Bapak/Ibu/Saudara/i untuk
+        hadir dalam acara perpisahan KKN
+        Fakultas Teknik UCB Tahun 2026.
+    </p>
+
+    <div class="card">
+        <div class="info">
+            <div class="icon">📅</div>
+            <b>Tanggal</b><br>
+            <span id="tanggalTampil">27 September 2026</span>
+        </div>
+        <div class="info">
+            <div class="icon">⏰</div>
+            <b>Waktu</b><br>
+            <span id="waktuTampil">18.00 WITA</span>
+        </div>
+        <div class="info">
+            <div class="icon">📍</div>
+            <b>Lokasi</b><br>
+            Rumah Bapak Desa Kuanheun
+        </div>
+    </div>
+
+    <div class="countdown">
+        <div class="timebox"><strong id="hari">00</strong><span>Hari</span></div>
+        <div class="timebox"><strong id="jam">00</strong><span>Jam</span></div>
+        <div class="timebox"><strong id="menit">00</strong><span>Menit</span></div>
+        <div class="timebox"><strong id="detik">00</strong><span>Detik</span></div>
+    </div>
+
+    <a class="map"
+       href="https://www.google.com/maps/place/10%C2%B014'17.4%22S+123%C2%B030'37.6%22E/@-10.2349342,123.5099147,16z/data=!4m5!3m4!4b1!8m2!3d-10.2381544!4d123.5104565?hl=id&entry=ttu&g_ep=EgoyMDI2MDkyMy4wIKXMDSoASAFQAw%3D%3D"
+       target="_blank">📍 Buka Lokasi di Google Maps</a>
+
+    <a class="wa"
+       href="https://wa.me/qr/INIGNU4ZCBSZE1"
+       target="_blank">💬 RSVP / Konfirmasi Kehadiran via WhatsApp</a>
+</section>
+
+<section class="reveal">
+    <div class="label">Kenangan Bersama</div>
+    <h2>Kelompok KKN</h2>
+    <div class="ornamen"></div>
+
+    <div class="photo-wrap">
+        <img src="c:\Users\USER\Downloads\foto_kelompok_kkn.png.jpeg" alt="Foto Kelompok KKN Fakultas Teknik UCB 2026">
+    </div>
+
+    <p class="quote">
+        "Banyak cerita, banyak tawa, dan banyak kenangan
+        yang tercipta dalam satu perjalanan."
+    </p>
+</section>
+
+<section class="reveal">
+    <div class="label">Anggota Kelompok</div>
+    <h2>Keluarga KKN 2026</h2>
+    <div class="ornamen"></div>
+
+    <div class="members">
+        <div class="member">01. Jevantris Keba Ranu</div>
+        <div class="member">02. Bernadeta Nita</div>
+        <div class="member">03. Tini S Neonane</div>
+        <div class="member">04. Septianus Umbu T Ninggeding</div>
+        <div class="member">05. Jersanto A D M Nubatoni</div>
+        <div class="member">06. Edward Oliver Rodolf</div>
+        <div class="member">07. Alexandre Rofinus Jahang</div>
+        <div class="member">08. Damianus Idrawan Mau</div>
+        <div class="member">09. Frido Markus Dethan</div>
+        <div class="member">10. Syawal Jamaludin</div>
+        <div class="member">11. Nicki Aldian Sanae</div>
+        <div class="member">12. Winto Ardian Henukh</div>
+        <div class="member">13. Revalina Rasti Mali</div>
+        <div class="member">14. Natalia Maria Putri Opat</div>
+        <div class="member">15. Vania Shanty Marina Bani</div>
+        <div class="member">16. Anastacya Putri Miranda Seo</div>
+    </div>
+</section>
+
+<section class="reveal">
+    <div class="label">Sampai Jumpa</div>
+    <h2>Terima Kasih</h2>
+    <div class="ornamen"></div>
+    <p>
+        Terima kasih atas segala kebersamaan,
+        dukungan, pengalaman, dan cerita yang telah
+        menjadi bagian dari perjalanan KKN kami.
+    </p>
+    <p class="quote">
+        Sampai bertemu di cerita-cerita berikutnya.
+    </p>
+</section>
+
+<footer>
+    KKN FAKULTAS TEKNIK UCB<br>
+    2026
+</footer>
+
+</div>
+
+<!-- Ganti file musik dengan musik pilihan Anda dan beri nama musik.mp3 -->
+<audio id="musik" loop preload="metadata">
+    <source src="musik.mp3" type="audio/mpeg">
+    Browser Anda tidak mendukung pemutar audio.
+</audio>
+
+<button class="music-btn" id="musicBtn" type="button" onclick="toggleMusic()">🎵 Musik OFF</button>
+
+<script>
+// ===============================
+// ATUR TANGGAL ACARA DI SINI
+// Format: YYYY-MM-DDTHH:MM:SS+08:00
+// Contoh: 2026-10-10T18:00:00+08:00
+// ===============================
+const tanggalAcara = new Date("2026-10-10T18:00:00+08:00");
+
+// Teks yang tampil pada undangan
+document.getElementById("tanggalTampil").textContent =
+    "27 September 2026";
+document.getElementById("waktuTampil").textContent =
+    "18.00";
+
+// Countdown
+function updateCountdown(){
+    const sekarang = new Date();
+    const selisih = tanggalAcara - sekarang;
+
+    if(selisih <= 0){
+        document.getElementById("hari").textContent="00";
+        document.getElementById("jam").textContent="00";
+        document.getElementById("menit").textContent="00";
+        document.getElementById("detik").textContent="00";
+        return;
+    }
+
+    const hari = Math.floor(selisih / (1000*60*60*24));
+    const jam = Math.floor((selisih / (1000*60*60)) % 24);
+    const menit = Math.floor((selisih / (1000*60)) % 60);
+    const detik = Math.floor((selisih / 1000) % 60);
+
+    document.getElementById("hari").textContent = String(hari).padStart(2,"0");
+    document.getElementById("jam").textContent = String(jam).padStart(2,"0");
+    document.getElementById("menit").textContent = String(menit).padStart(2,"0");
+    document.getElementById("detik").textContent = String(detik).padStart(2,"0");
+}
+setInterval(updateCountdown,1000);
+updateCountdown();
+
+// Musik
+const musik = document.getElementById("musik");
+const musicBtn = document.getElementById("musicBtn");
+
+musik.volume = 0.8;
+
+function toggleMusic(){
+    if (musik.paused) {
+        musik.play()
+            .then(() => {
+                musicBtn.textContent = "🎵 Musik ON";
+            })
+            .catch((error) => {
+                console.error("Musik gagal diputar:", error);
+                musicBtn.textContent = "❌ Musik gagal";
+            });
+    } else {
+        musik.pause();
+        musicBtn.textContent = "🎵 Musik OFF";
+    }
+}
+
+// Setelah pengguna menekan "Buka Undangan", coba mulai musik.
+// Browser tetap dapat memblokir autoplay; tombol musik selalu tersedia.
+document.querySelector('.btn[href="#acara"]')?.addEventListener("click", () => {
+    setTimeout(() => {
+        if (musik.paused) {
+            musik.play()
+                .then(() => {
+                    musicBtn.textContent = "🎵 Musik ON";
+                })
+                .catch(() => {
+                    musicBtn.textContent = "🎵 Putar Musik";
+                });
+        }
+    }, 150);
+});
+
+// Animasi saat scroll
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add("show");
+        }
+    });
+},{threshold:.12});
+
+document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>
