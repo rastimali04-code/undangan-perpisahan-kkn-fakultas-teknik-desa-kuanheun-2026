@@ -141,6 +141,30 @@ h2{
     width:100%;
     display:block;
 }
+.photo-gallery{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin:25px 0;
+}
+.photo-gallery .photo-wrap{
+    margin:0;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+}
+.photo-gallery .photo-wrap img{
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+    display:block;
+}
+.photo-gallery .photo-wrap:last-child:nth-child(odd){
+    grid-column:1 / -1;
+    width:50%;
+    justify-self:center;
+}
+
 .quote{
     font-family:Georgia,serif;
     font-style:italic;
@@ -275,8 +299,31 @@ footer{
     <h2>Kelompok KKN</h2>
     <div class="ornamen"></div>
 
-    <div class="photo-wrap">
-        <img src="foto_kelompok_kkn.png.jpeg" alt="Foto Kelompok KKN Fakultas Teknik UCB 2026">
+    <div class="photo-gallery">
+        <div class="photo-wrap">
+            <img src="foto_kelompok_kkn.png.jpeg" alt="Foto Kelompok KKN 1">
+        </div>
+        <div class="photo-wrap">
+            <img src="foto_2.jpeg.jpeg" alt="Foto Kelompok KKN 2">
+        </div>
+        <div class="photo-wrap">
+            <img src="foto_3.jpeg.jpeg" alt="Foto Kelompok KKN 3">
+        </div>
+        <div class="photo-wrap">
+            <img src="foto_4.jpeg.jpeg" alt="Foto Kelompok KKN 4">
+        </div>
+        <div class="photo-wrap">
+            <img src="foto_5.jpeg.jpeg" alt="Foto Kelompok KKN 5">
+        </div>
+        <div class="photo-wrap">
+            <img src="foto_6.jpeg.jpeg" alt="Foto Kelompok KKN 6">
+        </div>
+        <div class="photo-wrap">
+            <img src="foto_7.jpeg.jpeg" alt="Foto Kelompok KKN 7">
+        </div>
+        <div class="photo-wrap">
+            <img src="foto_8.jpeg.jpeg" alt="Foto Kelompok KKN 8">
+        </div>
     </div>
 
     <p class="quote">
@@ -350,7 +397,7 @@ const tanggalAcara = new Date("2026-09-27T18:00:00+08:00");
 document.getElementById("tanggalTampil").textContent =
     "27 September 2026";
 document.getElementById("waktuTampil").textContent =
-    "18.00";
+    "18.00 WITA";
 
 // Countdown
 function updateCountdown(){
